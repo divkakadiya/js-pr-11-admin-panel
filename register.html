@@ -204,13 +204,15 @@
           if (localStorage.getItem('user') == null) {
             data.push(obj)
             localStorage.setItem('user', JSON.stringify(data))
+            window.location.href = 'login.html'
           }
           else {
             let val = JSON.parse(localStorage.getItem('user'))
             val.push(obj)
             localStorage.setItem('user', JSON.stringify(val))
+            window.location.href = 'login.html'
           }
-          window.location.href = 'login.html'
+
           document.getElementById('name').value = ''
           document.getElementById('email').value = ''
           document.getElementById('pass').value = ''
@@ -221,6 +223,7 @@
         }
       }
     }
+
   </script>
 </body>
 

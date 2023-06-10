@@ -195,7 +195,7 @@
       let check = 0
 
       val.map((v) => {
-        if (v.userEmail == le && v.userPassword && v.role == lr) {
+        if (v.userEmail == le && v.userPassword == lp && v.role == lr) {
           check = 1;
           localStorage.setItem('userLogin', JSON.stringify(v))
         }
